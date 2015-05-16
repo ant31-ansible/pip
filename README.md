@@ -18,6 +18,8 @@ pip_packages:
   - pkg2
   - name: pkg3
     version: 2.1.0
+  - name: pkg4
+    state: latest
 
 ```
 

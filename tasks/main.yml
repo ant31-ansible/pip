@@ -1,7 +1,7 @@
 ---
 
 - name: PIP | Install PIP packages
-  pip: name={{item.name}} state=present version={{item.version|default(omit)}}
+  pip: name={{item.name}} state={{item.state|default('present')}} version={{item.version|default(omit)}}
   when: item is mapping
   with_items: pip_packages
   tags:
