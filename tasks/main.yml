@@ -1,0 +1,15 @@
+---
+
+- name: PIP | Install PIP packages
+  pip: name={{item.name}} state=present version={{item.version|default(omit)}}
+  when: item is mapping
+  with_items: pip_packages
+  tags:
+    - pip
+
+- name: PIP | Install PIP packages
+  pip: name={{item}} state=present
+  when: item is not mapping
+  with_items: pip_packages
+  tags:
+    - pip

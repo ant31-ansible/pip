@@ -47,4 +47,3 @@ License
 -------
 
 MIT
-# ansible-pip
